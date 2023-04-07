@@ -37,7 +37,6 @@ print(word,"is a palindrome?\n",isPalindrome(word))
 
 """
 Week 1
-Exercise 2
 2. Write a program that takes in a list of integers and returns the sum of all 
 """
 import random #load random library to generate random numbers
@@ -56,5 +55,38 @@ def totalEven(aList):
             sum+=element #adding the element to the sume if even
     return sum
         
-print(myList)
-print(totalEven(myList))
+print("The list is\n",myList)
+print("The sum of even elements in the list is:",totalEven(myList))
+
+"""
+Week 1
+3. Write a program that prompts the user for their age and checks whether they are old enough to vote (i.e., 18 years old or older).
+"""
+
+print("Welcome to our e-voting system.") #greeting message
+M = input("Kindly enter your age: ") #prompting user for their input
+#M = "18"
+
+#wrapping the code in try except to avoid program crashing if invlid entry
+try: 
+    N = int(M)
+    #checking if age is legal
+    if N>=18:
+        print("You are eligible to vote.")
+    #if age is not illegal, printing message
+    elif N>=0:
+        print("You are not eligible to vote.")
+    #ensuring that the age entered is in a valid range
+    else:
+        print("Please enter a valid age.")
+#throwing excepting if unable to cast input to integer
+except:
+    print("The age input must be a positive number.")
+#code exit message
+finally:
+    print("Thank you for using our services. See you soon.")
+
+"""
+Week 1
+4. Write a program that takes in a list of integers and returns the largest number in the list that is also divisible by 3.
+"""
