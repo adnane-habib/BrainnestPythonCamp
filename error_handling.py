@@ -135,6 +135,25 @@ Week 1 Error handling
 5. Write a function that takes a list of integers as an argument, and returns the largest integer in the list. 
    Use a try-except block to catch any ValueError exceptions that may be raised when attempting to compare elements that are not integers.
 """
+#declaring the list
+myList = [1, -50, "1", 2, 55, 201, "One", -99]
+
+def largestInteger(aList):
+    #a function to traverse the list and return the largest element divisible by 3
+    largestElement = float('-inf');#initiate the largest element to - infinity
+    for element in aList:
+        try:
+            if largestElement<int(element):#testing if the element discovered is the largest
+                largestElement=element #updating the largest element
+        except ValueError as e:
+            print("Value error, not an integer",e)
+        
+    return largestElement
+
+#printing the list of elements        
+print("The list is\n",myList)
+#printing the function result
+print("The lagest element in the list is:",largestInteger(myList))
 
 """
 End of file
