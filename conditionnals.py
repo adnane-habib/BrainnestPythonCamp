@@ -5,7 +5,7 @@ Adnane Habib
 Team A6
 """
 """
-Week 1
+Week 1 Conditionals
 1. Write a program that prompts the user for a string and checks whether the string is a palindrome (i.e., the string reads the same forward and backward).
 """
 def isPalindrome(word):
@@ -36,7 +36,7 @@ print("\n")
 print(word,"is a palindrome?\n",isPalindrome(word))
 
 """
-Week 1
+Week 1 Conditionals
 2. Write a program that takes in a list of integers and returns the sum of all 
 """
 import random #load random library to generate random numbers
@@ -59,7 +59,7 @@ print("The list is\n",myList)
 print("The sum of even elements in the list is:",totalEven(myList))
 
 """
-Week 1
+Week 1 Conditionals
 3. Write a program that prompts the user for their age and checks whether they are old enough to vote (i.e., 18 years old or older).
 """
 
@@ -87,7 +87,7 @@ finally:
     print("Thank you for using our services. See you soon.")
 
 """
-Week 1
+Week 1 Conditionals
 4. Write a program that takes in a list of integers and returns the largest number in the list that is also divisible by 3.
 """
 import random #load random library to generate random numbers
@@ -111,7 +111,7 @@ print("The list is\n",myList)
 print("The lagest element divisible by 3 in the list is:",largest3Divisible(myList))
 
 """
-Week 1
+Week 1 Conditionals
 5. Write a program that prompts the user for a number and checks whether the number is a prime number (i.e., only divisible by 1 and itself).
 """
 print("Welcome to our prime checking system.") #greeting message
@@ -145,4 +145,5 @@ finally:
 
 """
 End of file
+Week 1 Conditionals
 """
