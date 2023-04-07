@@ -81,10 +81,34 @@ try:
         print("Please enter a valid age.")
 #throwing excepting if unable to cast input to integer
 except:
-    print("The age input must be a positive number.")
+    print("The age input is expected to be a positive number.")
 #code exit message
 finally:
     print("Thank you for using our services. See you soon.")
+
+"""
+Week 1
+4. Write a program that takes in a list of integers and returns the largest number in the list that is also divisible by 3.
+"""
+import random #load random library to generate random numbers
+N = random.randint(1,100) #generating random list size
+
+print(N)
+myList=[]
+for i in range(N):
+    myList.append(random.randint(0,N)) #generating random integers list
+
+def largest3Divisible(aList):
+    #a function to traverse the list and return the largest element divisible by 3
+    largestElement = float('-inf');#initiate the largest element to - infinity
+    for element in aList:
+        if element%3==0:#testing if the element is divisble by 3
+            if largestElement<element:#testing if the element discovered is the largest
+                largestElement=element #updating the largest element
+    return largestElement
+        
+print("The list is\n",myList)
+print("The lagest element divisible by 3 in the list is:",largest3Divisible(myList))
 
 """
 Week 1
