@@ -79,7 +79,7 @@ try:
     #ensuring that the age entered is in a valid range
     else:
         print("Please enter a valid age.")
-#throwing excepting if unable to cast input to integer
+#throwing exception if unable to cast input to integer
 except:
     print("The age input is expected to be a positive number.")
 #code exit message
@@ -112,5 +112,37 @@ print("The lagest element divisible by 3 in the list is:",largest3Divisible(myLi
 
 """
 Week 1
-4. Write a program that takes in a list of integers and returns the largest number in the list that is also divisible by 3.
+5. Write a program that prompts the user for a number and checks whether the number is a prime number (i.e., only divisible by 1 and itself).
+"""
+print("Welcome to our prime checking system.") #greeting message
+M = input("Kindly enter a positive integer to check: ") #prompting user for their input
+#M = "10" #existing for debugging purposes
+try:
+    N = int(M)
+
+    def isPrime(N):
+        
+        if N ==0 or N==1 or N==2 or N==3: #eliminating for the first 4 integers
+            return True
+        else: #veryfying if the number is divising by any of the numbers below it
+            for i in range(2,N//2): #we only check the first half
+                if N%i==0:
+                    flag = False; #breaking the loop if the number is a factor
+                    break;
+                else:
+                    
+                    flag = True
+            return flag
+    #print(N)
+    print(f"is {N} a prime number?")
+    print(isPrime(N))
+#throwing exception if unable to cast input to integer
+except:
+    print("The input is expected to be a positive number.")
+#code exit message
+finally:
+    print("Thank you for using our services. See you soon.")
+
+"""
+End of file
 """
