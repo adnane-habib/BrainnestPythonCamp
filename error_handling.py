@@ -92,6 +92,51 @@ print("Converted float")
 print(myListFLoatConversion(myList))
 
 """
+Week 1 Error handling
+4. Write a function that takes a list of dictionaries as an argument, and returns the value of a specified key from each dictionary. 
+   Use a try-except block to catch any KeyError exceptions that may be raised when attempting to access a key that does not exist in a dictionary.
+"""
+def myDictValues(myDict, myKey):
+    #function definition
+    myListofValues=[]#initiating empty list for values
+
+    
+    #traversing the list 
+    for myDict in mydicts:
+        #testing if the element is a float and appending it
+        try:
+            myListofValues.append(myDict[myKey])
+    #notigying that the element is not a float
+        except KeyError as e:
+            print("Key not found in one of the dictionires", e)
+    return myListofValues
+
+
+#defining a valid key
+myKey = "banana"
+
+#building list of dictionaries
+dict1 = {"banana":11, "apple": 12, "orange":13}
+dict2 = {"banana":21, "mango": 22, "orange":23}
+dict3 = {"banana":31, "plum": 32, "mango":33}
+mydicts=[dict1, dict2, dict3]
+print("Let us look the values corresponding to",myKey)
+#calling the function and printing the found elements
+print(myDictValues(mydicts, myKey))
+
+#defining a invalid key
+myKey = 11
+print("Let us look the values corresponding to",myKey)
+#calling the function and printing the found elements
+print(myDictValues(mydicts, myKey))
+
+"""
+Week 1 Error handling
+5. Write a function that takes a list of integers as an argument, and returns the largest integer in the list. 
+   Use a try-except block to catch any ValueError exceptions that may be raised when attempting to compare elements that are not integers.
+"""
+
+"""
 End of file
 Week 1 Error handling
 """
