@@ -1,7 +1,12 @@
 """
+Brainnest Python Training
+April 2023
+Adnane Habib
+Team A6
+"""
+"""
 Week 1
-Exercise 1
-Write a program that prompts the user for a string and checks whether the string is a palindrome (i.e., the string reads the same forward and backward).
+1. Write a program that prompts the user for a string and checks whether the string is a palindrome (i.e., the string reads the same forward and backward).
 """
 def isPalindrome(word):
     #a function accepting a string checking that the string is a plaindrome
@@ -29,8 +34,27 @@ def isPalindrome(word):
 word = input("Enter a word: ")#reqeusting to input a string from the user
 print("\n")
 print(word,"is a palindrome?\n",isPalindrome(word))
+
 """
 Week 1
-Exercise 1
-Write a program that prompts the user for a string and checks whether the string is a palindrome (i.e., the string reads the same forward and backward).
+Exercise 2
+2. Write a program that takes in a list of integers and returns the sum of all 
 """
+import random #load random library to generate random numbers
+N = random.randint(1,100) #generating random list size
+N=10
+print(N)
+myList=[]
+for i in range(N):
+    myList.append(random.randint(0,N)) #generating random integers list
+
+def totalEven(aList):
+    #a function to traverse the list and return the sum of all even integers
+    sum = 0;
+    for element in aList:
+        if element%2==0:#testing if the element is even
+            sum+=element #adding the element to the sume if even
+    return sum
+        
+print(myList)
+print(totalEven(myList))
