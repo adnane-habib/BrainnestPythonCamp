@@ -66,6 +66,30 @@ else:
 finally:
     print("\n\nThank you for using our services. See you soon.")
 
+"""
+Week 1 Error handling
+3. Write a function that takes a list of strings as an argument, and returns a new list containing only the strings that can be successfully converted to a float. 
+   Use a try-except block to catch any ValueError exceptions that may be raised when attempting to convert a string to a float.
+"""
+myList = ["1", "2", "2.5", "four", "5.0"] #input list
+
+def myListFLoatConversion(myList):
+    #function definition
+    myListFloat=[]#initiating empty list for floats
+    print("You have entered")
+    print(myList)
+    #traversing the list 
+    for element in myList:
+        #testing if the element is a float and appending it
+        try:
+            myListFloat.append(float(element))
+    #notigying that the element is not a float
+        except:
+            print(element,"is not a valid float")
+    return myListFloat
+print("Converted float")
+#calling the function and printing the float elements
+print(myListFLoatConversion(myList))
 
 """
 End of file
