@@ -54,7 +54,10 @@ while attempts !=0:
         
     finally:
         if not("*" in guessedWord):
-            print("COntraluation! You won")
+            print("Contraluation! You won")
+            break
+        elif attempts == 0:
+            print("Sorry! You have no more attempts.")
             break
         else:            
             print("You still have",attempts,"attempts.")
