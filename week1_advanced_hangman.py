@@ -1,3 +1,6 @@
+myAlphabet =("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+             "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
+
 word = "AlphaBlondie"
 
 guessedWord = ["*"]*len(word)
@@ -33,9 +36,11 @@ while attempts !=0:
     character = input("Enter a character: ")
     attempt +=1
     try:
-        if len(character) !=1:
-            raise Exception("Sorry, You have to enter only 1 character")
-    except:
+        if not(character.lower() in myAlphabet):
+            print("The system detected that the character is invalid")            
+            raise Exception("Sorry, You have to enter only 1 valid character")
+    except Exception as e:
+        print(e)
         continue
     else:
         if character in guessedWord:            
@@ -67,10 +72,7 @@ while attempts !=0:
                 break
             else:
                 pass
-            
-    
-
-    
+   
 
 
 print("The word to guess is")
