@@ -1,3 +1,37 @@
+"""
+Brainnest Python Training
+April 2023
+Adnane Habib
+Team A6
+"""
+"""
+Week 1 Hangman
+'''
+The hangman game is a word guessing game where the player is given a word and has to guess the letters that make up the word. 
+The player is given a certain number of tries (no more than 6 wrong guesses are allowed) to guess the correct letters before the game is over.
+'''
+
+# Output
+'''
+You have 6 tries left.                                                                                                                                           
+Used letters:                                                                                                                                                    
+Word: _ _ _ _                                                                                                                                                    
+Guess a letter: a 
+
+You have 6 tries left.                                                                                                                                           
+Used letters: a                                                                                                                                                  
+Word: _ a _ a                                                                                                                                                    
+Guess a letter: j    
+
+You have 6 tries left.                                                                                                                                           
+Used letters: j a                                                                                                                                                
+Word: j a _ a                                                                                                                                                    
+Guess a letter: v                                                                                                                                                
+You guessed the word java !
+'''
+"""
+
+
 myAlphabet =("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
              "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
 
@@ -78,3 +112,8 @@ while attempts !=0:
 print("The word to guess is")
 print(word)
 print("You made",attempt,"attempts.")
+
+"""
+End of file
+Week 1 hangman game
+"""
