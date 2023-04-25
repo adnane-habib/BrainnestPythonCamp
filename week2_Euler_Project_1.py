@@ -121,12 +121,13 @@ if __name__ == '__main__':
     minRange = 100
     sumPalindroms = 0
     myList=[]
+    #largestPalindrom = 0
     for i in range(minRange,maxRange+1):
         for j in range(i,maxRange+1):
             number = i*j
             sumPalindroms += isPalindrom(number)
             myList.append(number*isPalindrom(number))
-            
+    largestPalindrom = max(myList)         
     """        
     sumPalindroms1 = 0
     myList1=[]
@@ -137,14 +138,14 @@ if __name__ == '__main__':
     print("The total of plaindrom numbers between 10000 and 1000000 is:") #for debuging purposes
     print(sumPalindroms1)
     """
-    print("The total of plaindrom numbers that are a product of 3 digit numbers is:")
-    print(sumPalindroms)
+    print("The largest palindrom is:")
+    print(largestPalindrom)
 
     #print("1001 is plaindrom?",isPalindrom(1001))
     
 print()
 print()
-#1239
+#906609
 
 """
 Week 2 Euler_Project_1
