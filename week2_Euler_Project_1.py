@@ -216,7 +216,7 @@ if __name__ == '__main__':
     index = 7
     number = 15
     N = 10001
-    while index<N:
+    while index<=N:
         for prime in myPrimes:
             if number%prime==0:
                 break
@@ -229,7 +229,7 @@ if __name__ == '__main__':
     
 print()
 print()
-#104729
+#104743
 
 """
 Week 2 Euler_Project_1
