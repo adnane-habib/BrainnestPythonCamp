@@ -94,40 +94,18 @@ print()
 #837799
 
 """
-Week 2 Euler_Project_1
-3. The prime factors of 13195 are 5, 7, 13 and 29.
-What is the largest prime factor of the number 600851475143 ?
+Week 3 Euler_Project_2
+3. 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+What is the sum of the digits of the number 2^1000?
 """
 print("Exerise 3")
 print()
-
-import math
-if __name__ == '__main__':
-    referenceNumber = 600851475143
-    myUpperLimit = math.sqrt(referenceNumber)
-    #using the same approach to resolve #9
-    #we only need to consider numbers below square root of 600851475143
-    myPrimes = [2, 3, 5, 7, 11, 13]
-    index = 7
-    number = 15
-    N = myUpperLimit
-    #suMyPrimes = sum(myPrimes)
-    while number<=N:
-        if referenceNumber%number==0:#we only consider those numbers that are factors of 600851475143
-            for prime in myPrimes:
-                if number%prime==0:
-                    break
-            else:
-                myPrimes.append(number)#appends the number if prime
-                index+=1
-                 
-        number+=2
-    print(f"The largest primefactor of {referenceNumber} is")
-    print(myPrimes[-1])
+#using list comprehension and casting
+sum([int(i) for i in str(pow(2,1000))])
     
 print()
 print()
-#6857
+#1366
 """
 Week 2 Euler_Project_1
 4. A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
