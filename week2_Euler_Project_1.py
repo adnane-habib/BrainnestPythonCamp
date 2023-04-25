@@ -54,7 +54,7 @@ if __name__ == '__main__':
     while flag:
         lastFibo = myFibo
         myFibo = fibo(n)
-        if myFibo>=400000:
+        if myFibo>=4000000:
             flag = False
             continue
         elif myFibo%2==0:
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     
 print()
 print()
-#257114
+#4613732
 """
 Week 2 Euler_Project_1
 3. The prime factors of 13195 are 5, 7, 13 and 29.
