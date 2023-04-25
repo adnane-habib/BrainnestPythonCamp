@@ -107,50 +107,27 @@ print()
 print()
 #1366
 """
-Week 2 Euler_Project_1
-4. A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
-Find the largest palindrome made from the product of two 3-digit numbers.
+Week 3 Euler_Project_2
+4. If the numbers 1 to 5 are written out in words: one, two, three, four, five, then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
+If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?
+NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. 
+The use of "and" when writing out numbers is in compliance with British usage.
 """
-print("Exerise 4")
-print()
+    print("Exerise 4")
+    print()
 
-def isPalindrom(number):
-    paddedNumber = str(number)
-    for i in range(len(paddedNumber)//2):
-        if paddedNumber[i]!=paddedNumber[len(paddedNumber)-1-i]:
-            return 0
-    return 1
+    mydict={'one':182, 'two':181, 'three':181,'four':181, 'five':181, 'six':181, 'seven':181, 'eight':181,'nine':181,
+        'ten':10, 'eleven':10, 'twelve':10, 'thirteen':10, 'fourteen':10, 'fifteen':10, 'sixteen':10, 'seventeen':10, 'eighteen':10, 'nineteen':10,
+        'twenty':100, 'thirty':100, 'forty':100, 'fifty':100, 'sixty':100, 'seventy':100, 'eighty':100, 'ninety':100,
+        'and':891, 'hundred': 900, 'thousand':1}
+    sumLetters = 0
+    for key, value in mydict.items():
+        sumLetters += len(key)*value
+    print(sumLetters)
+    print()
+    print()
+    #21124
 
-if __name__ == '__main__':
-    maxRange = 999
-    minRange = 100
-    sumPalindroms = 0
-    myList=[]
-    #largestPalindrom = 0
-    for i in range(minRange,maxRange+1):
-        for j in range(i,maxRange+1):
-            number = i*j
-            sumPalindroms += isPalindrom(number)
-            myList.append(number*isPalindrom(number))
-    largestPalindrom = max(myList)         
-    """        
-    sumPalindroms1 = 0
-    myList1=[]
-    for number in range(minRange*minRange,(maxRange+1)*(maxRange+1)):
-        sumPalindroms1 += isPalindrom(number)
-        myList1.append(number*isPalindrom(number))
-    
-    print("The total of plaindrom numbers between 10000 and 1000000 is:") #for debuging purposes
-    print(sumPalindroms1)
-    """
-    print("The largest palindrom is:")
-    print(largestPalindrom)
-
-    #print("1001 is plaindrom?",isPalindrom(1001))
-    
-print()
-print()
-#906609
 
 """
 Week 2 Euler_Project_1
