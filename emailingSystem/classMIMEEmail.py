@@ -6,6 +6,8 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 from emailingSystem.classAdvancedFiles import MYFiles
 from typing import List
+import datetime
+from datetime import datetime 
 
 
 
@@ -54,7 +56,7 @@ class MYEmail:
             self.smtpObj.starttls()
             self.smtpObj.login(self.senderEmail, self.password)
         except Exception as e:
-            print("ERROR LOGIN\p")
+            print("ERROR LOGIN\n")
             print("If you are using gmail, think about activating app passwords.")
             print("Visit your google account security settings, and activate 2-steps verification.")
             print("You can then activate app password and use it to access the app.")
@@ -175,9 +177,18 @@ class MYEmail:
                 #print("Email sent successfully.")
                 self.serverLogout()
                 return True
-        
-  
-
+            
+        def printLogFile(self):
+            print("printing log file")
+            os.getcwd()
+            myFile =  "LogFile"+datetime.now().strftime("%d_%m_%Y %H_%M_%S"+".txt")
+            with open(myFile,'a') as fp:
+                fp.write("Log file created on "+ datetime.now())
+                for element in self.logFile:
+                    fp.write("\n"+elment)
+                fp.write('End of Log file')
+                  
+            
 
 
 
