@@ -1,0 +1,3 @@
+Log file created on 02_05_2023 20_43_23
+ERROR LOGIN
+Logged out successfullyEnd of Log file

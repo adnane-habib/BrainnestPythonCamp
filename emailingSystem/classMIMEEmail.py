@@ -178,16 +178,16 @@ class MYEmail:
                 self.serverLogout()
                 return True
             
-        def printLogFile(self):
-            print("printing log file")
-            os.getcwd()
-            myFile =  "LogFile"+datetime.now().strftime("%d_%m_%Y %H_%M_%S"+".txt")
-            with open(myFile,'a') as fp:
-                fp.write("Log file created on "+ datetime.now())
-                for element in self.logFile:
-                    fp.write("\n"+elment)
-                fp.write('End of Log file')
-                  
+    def printLogFile(self):
+        print("printing log file")
+        os.getcwd()
+        myFile =  "LogFile"+datetime.now().strftime("%d_%m_%Y %H_%M_%S"+".txt")
+        with open(myFile,'a') as fp:
+            fp.write("Log file created on "+ datetime.now().strftime("%d_%m_%Y %H_%M_%S"))
+            for element in self.logFile:
+                fp.write("\n"+str(element))
+            fp.write('End of Log file')
+        print("Printed to log file")          
             
 
 
